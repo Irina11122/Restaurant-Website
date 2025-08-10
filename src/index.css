@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#home {
+   background: linear-gradient(70deg, #414850,#120000);
+}
+
+.navbar {
+    background: linear-gradient(to right,#262626,#040404);
+    color: white;
+}
+
+.napkin {
+    background: linear-gradient(145deg,#FFFAEA,#DDCC99,#473A16);
+    position: absolute;
+    left: 50%;
+    width: 1200px;
+    height: 110vh;
+    top: 5%;
+    z-index: 0;
+}
+
+.btn-shadow {
+    box-shadow: 0 4px 30px #ddcc9986;
+}
+
+button:hover {
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(to right,#9D8B5A,#E3D4A8,#FCF6E3) ;
+    box-shadow: 0 4px 30px #1c1500;
+    color: #040404;
+    text-shadow: 5px 0 8px #040404a9;
+}
+
+.home-par {
+    line-height: 62px;
+    color: white;
+ 
+}
+
+.pizza-img {
+    z-index: 10;
+    height: 140vh;
+    position: absolute;
+    left: 45%;
+    top: -25%;
+    z-index: 90%;
+}
+
+.crumbs {
+    width: 1000px;
+    right: 10%;
+}
+
+.great-food {
+    font-size: 96px;
+    letter-spacing: 2%;
+    line-height: 149px;
+    color: #FFE494;
+    text-shadow: inset 4px 4px 10px #745D4B ;
+}
