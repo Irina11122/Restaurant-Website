@@ -1,63 +1,152 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+body {
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
 #home {
-   background: linear-gradient(70deg, #414850,#120000);
+  background: linear-gradient(132.77deg, #414850 11.17%, #120000 74.03%);
+  color: #ffe494;
 }
 
+#specialties {
+  background: linear-gradient(180deg, #444343 0%, #141414 100%);
+}
+
+#about {
+  background: linear-gradient(132.77deg, #3a4047 11.17%, #23292c 74.03%);
+  color: #fff8e1;
+}
+
+#contact {
+  background: url('../public/contact-bg.jpg');
+  background-size: 100%;
+  z-index: 0;
+}
 .navbar {
-    background: linear-gradient(to right,#262626,#040404);
-    color: white;
+  background: linear-gradient(to right, #262626, #040404);
+  color: white;
 }
 
 .napkin {
-    background: linear-gradient(145deg,#FFFAEA,#DDCC99,#473A16);
-    position: absolute;
-    left: 50%;
-    width: 1200px;
-    height: 110vh;
-    top: 5%;
-    z-index: 0;
+  background: linear-gradient(
+    148.17deg,
+    #fffaea 22.53%,
+    #ddcc99 29.8%,
+    #473a16 75.78%
+  );
+
+  position: absolute;
+  width: 500px;
+  height: 110vh;
+  top: 0;
+  right: -0.5%;
+  z-index: 1;
+  rotate: 10deg;
+  box-shadow: 0 0 20px #000;
+  border-radius: 12px;
+}
+.w-30 {
+  width: 30%;
+}
+.pizza-menu-img {
+  height: 70%;
+  left: 22%;
+  top: 7%;
+  transition: all 2s ease;
 }
 
+.pizza-menu-img:hover {
+  transform: rotate(360deg);
+  scale: 1.1;
+}
+.order-btn {
+  width: 70%;
+  border-radius: 18px;
+  font-size: 3rem;
+  border: 2px solid #ddcc99;
+}
 .btn-shadow {
-    box-shadow: 0 4px 30px #ddcc9986;
+  box-shadow: 0 4px 30px #ddcc99c3;
 }
 
 button:hover {
-    transition: all 0.5s ease-in-out;
-    background: linear-gradient(to right,#9D8B5A,#E3D4A8,#FCF6E3) ;
-    box-shadow: 0 4px 30px #1c1500;
-    color: #040404;
-    text-shadow: 5px 0 8px #040404a9;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(to right, #9d8b5a, #e3d4a8, #fcf6e3);
+  box-shadow: 0 4px 30px #1c1500;
+  color: #040404;
+  text-shadow: 5px 0 8px #040404a9;
 }
 
 .home-par {
-    line-height: 62px;
-    color: white;
- 
-}
-
-.pizza-img {
-    z-index: 10;
-    height: 140vh;
-    position: absolute;
-    left: 45%;
-    top: -25%;
-    z-index: 90%;
+  line-height: 50px;
+  font-size: 1.4rem;
+  color: white;
 }
 
 .crumbs {
-    width: 1000px;
-    right: 10%;
+  rotate: 179deg;
+  top: 4%;
+  right: 25%;
+  z-index: 0;
+}
+.spec-text {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.great-food {
+  font-size: 5.5rem;
+  letter-spacing: 2%;
+  line-height: 149px;
+  color: #ffe494;
+  text-shadow: 4px 0 #745d4b, -4px 0 #745d4b, 0 4px #745d4b, 0 -4px #745d4b,
+    1px 1px #745d4b, -1px -1px #745d4b, 1px -1px #745d4b, -1px 1px #745d4b;
+}
+.plate {
 }
 
-.great-food {
-    font-size: 96px;
-    letter-spacing: 2%;
-    line-height: 149px;
-    color: #FFE494;
-    text-shadow: inset 4px 4px 10px #745D4B ;
+.pizza-img {
+  height: 100%;
+  top: 0;
+  width: 80%;
+  right: -1%;
+}
+
+@media (max-width: 780px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    width: 50%;
+  }
+  #home {
+    flex-direction: column;
+  }
+
+  .great-food {
+    margin-top: 50px;
+    font-size: 2rem;
+    line-height: 50px;
+  }
+
+  .home-par {
+    line-height: 20px;
+    width: 100%;
+  }
+
+  .order-btn {
+    width: 100%;
+    font-size: medium;
+  }
+
+  .pizza-img {
+    transform: rotate(90deg);
+    top: 0;
+    height: 400px;
+    width: 400px;
+    right: 0;
+  }
 }

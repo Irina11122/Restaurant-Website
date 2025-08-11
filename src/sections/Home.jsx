@@ -1,32 +1,38 @@
-import React from "react";
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 export default function Home() {
+  const component = useRef(null);
+
   return (
-    <section id="home" className="flex w-full h-screen overflow-hidden">
-      <div className="w-1/2 flex flex-col justify-center items-center">
-        <div className="playfair-display-bold text-4xl text-start great-food">
-          <h1> Great Food,Better Company</h1>
-          <h1></h1>
+    <section
+      ref={component}
+      id="home"
+      className="hero flex w-full h-screen overflow-hidden"
+    >
+      <img
+        src="../../public/NicePng_cookie-crumbs-png_762694932.png"
+        alt=""
+        className="absolute right-0 crumbs top-0 z-0"
+      />
+      <div className="md:w-1/2 flex flex-col md:justify-center items-center justify-center md:ml-20 z-10 h-1/2  ">
+        <div className="playfair-display-bold text-4xl text-start great-food z-10">
+          <h1> Great Food,</h1>
+          <h1>Better Company</h1>
         </div>
-        <p className="home-par text-start">
-          Serving comfort food made with love — fresh, fast, and full of flavor
-          .
+        <p className="home-par w-1/2 playfair-display-regular mb-5">
+          Serving comfort food made with love — fresh, fast, and full of flavor.
         </p>
-        <button className="bg-black text-white montserrat-underline-bold uppercase p-4 w-1/2 rounded btn-shadow border hover:button-hover">
+        <button className="bg-black text-white montserrat-underline-bold uppercase p-4 order-btn btn-shadow border hover:button-hover">
           order online
         </button>
       </div>
-      <div className="relative w-1/2">
-        <div className="w-1/2 h-1/2 bg-green-100 rotate-12 napkin z-0"></div>
+      <div className="relative md:w-1/2 h-1/2 md:h-screen w-full">
         <img
-          src="../../public/NicePng_cookie-crumbs-png_762694932.png"
-          alt=""
-          className="absolute rotate-12 crumbs"
-        />
-        <img
-          src="../../public/top-view-mushroom-pizza-sliced-cooked-dough-with-cheese-olives-dark-surface-food-italian-meal-pizza-dough.png"
+          src="/half-pizza.png"
           alt="pizza-home"
-          className="pizza-img"
+          className="md:object-cover absolute z-10 pizza-img"
         />
       </div>
     </section>
