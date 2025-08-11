@@ -96,8 +96,10 @@ body {
 }
 
 .menu-card:hover .menu-info-div p {
-  color: #cbc3ab;
   font-weight: bold;
+  background: -webkit-linear-gradient(45deg, #ddcc99, #473a16, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .napkin {
@@ -186,6 +188,10 @@ body {
 .spec-text {
   font-size: 2rem;
   letter-spacing: 2px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(45deg,#fff8e1, #ddcc99, #473a16);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .great-food {
   font-size: 5.5rem;
