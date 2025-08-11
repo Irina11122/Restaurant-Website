@@ -6,6 +6,7 @@ import Contact from '../sections/Contact';
 import useLocoScroll from '../hooks/useLocoScroll';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import Navbar from '../components/Navbar';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,12 +37,15 @@ export default function MainPage() {
   }, []);
 
   return (
-    <main className="smooth-scroll overflow-hidden App">
-      <div className="napkin bg-green-100 h-screen w-full z-0 absolute right-0 top-0"></div>
-      <Home />
-      <Specialties />
-      <About />
-      <Contact />
-    </main>
+    <div>
+      <Navbar />
+      <main id="mainpage" className=" App">
+        <div className="napkin bg-green-100 h-screen w-full z-0 absolute right-0 top-0"></div>
+        <Home />
+        <Specialties />
+        <About />
+        <Contact />
+      </main>
+    </div>
   );
 }

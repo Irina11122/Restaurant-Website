@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+  const navigate = useNavigate();
   const component = useRef(null);
 
   return (
@@ -24,7 +26,10 @@ export default function Home() {
         <p className="home-par w-1/2 playfair-display-regular mb-5">
           Serving comfort food made with love — fresh, fast, and full of flavor.
         </p>
-        <button className="bg-black text-white montserrat-underline-bold uppercase p-4 order-btn btn-shadow border hover:button-hover">
+        <button
+          onClick={() => navigate('menu')}
+          className="bg-black home-button text-white montserrat-underline-bold uppercase p-4 order-btn btn-shadow border hover:button-hover"
+        >
           order online
         </button>
       </div>

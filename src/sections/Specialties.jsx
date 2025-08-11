@@ -1,7 +1,9 @@
 import gsap from 'gsap';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Specialties() {
+  const navigate = useNavigate();
   const menuInfo = [
     {
       plate: '/image.png',
@@ -40,7 +42,11 @@ export default function Specialties() {
       <div className="h-screen flex flex-col md:flex-row md:flex-wrap justify-center m-0 items-center">
         {menuInfo.map((menu, i) => {
           return (
-            <div className="w-30 relative z-20" key={i}>
+            <div
+              onClick={() => navigate('menu')}
+              className="w-30 relative z-20"
+              key={i}
+            >
               <img src={menu.plate} alt="" className="plate z-10" />
               <img
                 src={menu.image}

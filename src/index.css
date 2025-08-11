@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  overflow: hidden;
   transition: all 0.4s ease-in-out;
+  background: linear-gradient(132.77deg, #3a4047 11.17%, #23292c 74.03%);
+  overflow: hidden;
 }
+.App {
+  overflow: hidden;
+}
+
 #home {
   background: linear-gradient(132.77deg, #414850 11.17%, #120000 74.03%);
   color: #ffe494;
@@ -19,6 +24,10 @@ body {
   color: #fff8e1;
 }
 
+#menu {
+  overflow-y: auto;
+}
+
 #contact {
   background: url('../public/contact-bg.jpg');
   background-size: 100%;
@@ -27,6 +36,68 @@ body {
 .navbar {
   background: linear-gradient(to right, #262626, #040404);
   color: white;
+}
+.minus-btn {
+  top: 40%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  right: -10px;
+}
+.modal-my {
+  width: 90%;
+}
+.plus-btn {
+  top: 40%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.my-menu-img {
+  width: 52%;
+  top: 10%;
+  left: 25%;
+}
+
+.my-order-btn {
+  rotate: -45deg;
+  z-index: 0;
+  padding: 20px;
+  background: linear-gradient(to right, #9d8b5a, #e3d4a8, #fcf6e3);
+}
+.menu-card:hover .my-order-btn {
+  rotate: 0deg;
+  scale: 1.4;
+  z-index: 10;
+  top: 20%;
+  transition: all 0.7s ease;
+  left: 50%;
+  transform: translate(-35%, 50%);
+  box-shadow: 0 0 20px #000;
+  box-shadow: 0 4px 30px #1c1500;
+  color: #040404;
+  text-shadow: 5px 0 8px #040404a9;
+  width: 60%;
+  background: #000;
+  color: #e3d4a8;
+}
+.menu-card:hover .my-menu-img {
+  width: 100%;
+  top: -20px;
+  left: 0;
+  z-index: 0;
+  transition: all 0.7s ease;
+}
+.menu-card:hover .menu-info-div {
+  scale: 1.2;
+}
+
+.menu-card:hover .menu-info-div p {
+  color: #cbc3ab;
+  font-weight: bold;
 }
 
 .napkin {
@@ -50,11 +121,32 @@ body {
 .w-30 {
   width: 30%;
 }
+
+#pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.pay-div {
+  background: #d9d9d9;
+  width: 80%;
+  height: 90%;
+  border-radius: 18px;
+}
+.credit-card {
+  background: linear-gradient(45deg, #0b0b0b, #25272a, #414850);
+  height: 300px;
+  width: 500px;
+  border-radius: 24px;
+  box-shadow: 1px 2px 30px #212121;
+}
 .pizza-menu-img {
   height: 70%;
   left: 22%;
   top: 7%;
   transition: all 2s ease;
+  cursor: pointer;
 }
 
 .pizza-menu-img:hover {
@@ -71,7 +163,7 @@ body {
   box-shadow: 0 4px 30px #ddcc99c3;
 }
 
-button:hover {
+.home-button:hover {
   transition: all 0.5s ease-in-out;
   background: linear-gradient(to right, #9d8b5a, #e3d4a8, #fcf6e3);
   box-shadow: 0 4px 30px #1c1500;
@@ -103,14 +195,22 @@ button:hover {
   text-shadow: 4px 0 #745d4b, -4px 0 #745d4b, 0 4px #745d4b, 0 -4px #745d4b,
     1px 1px #745d4b, -1px -1px #745d4b, 1px -1px #745d4b, -1px 1px #745d4b;
 }
-.plate {
-}
 
 .pizza-img {
   height: 100%;
   top: 0;
   width: 80%;
   right: -1%;
+}
+
+.plates-div {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order-div {
+  width: 30%;
 }
 
 @media (max-width: 780px) {
