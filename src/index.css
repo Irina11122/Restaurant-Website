@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 body {
+  overflow: hidden;
   transition: all 0.4s ease-in-out;
   background: linear-gradient(132.77deg, #3a4047 11.17%, #23292c 74.03%);
-  overflow: hidden;
 }
 .App {
   overflow: hidden;
 }
+.cart {
+}
 
+.my-cart {
+  height: 70vh;
+  overflow-y: auto;
+  border-radius: 24px;
+}
 #home {
   background: linear-gradient(132.77deg, #414850 11.17%, #120000 74.03%);
   color: #ffe494;
@@ -25,7 +32,7 @@ body {
 }
 
 #menu {
-  overflow-y: auto;
+  overflow: auto;
 }
 
 #contact {
@@ -58,7 +65,7 @@ body {
 
 .my-menu-img {
   width: 52%;
-  top: 10%;
+  top: 8%;
   left: 25%;
 }
 
@@ -83,16 +90,18 @@ body {
   width: 60%;
   background: #000;
   color: #e3d4a8;
+  font-weight: bolder;
 }
 .menu-card:hover .my-menu-img {
-  width: 100%;
+  width: 90%;
   top: -20px;
-  left: 0;
+  left: 5%;
   z-index: 0;
   transition: all 0.7s ease;
 }
 .menu-card:hover .menu-info-div {
   scale: 1.2;
+  transition: all 0.5s ease;
 }
 
 .menu-card:hover .menu-info-div p {
@@ -100,6 +109,7 @@ body {
   background: -webkit-linear-gradient(45deg, #ddcc99, #473a16, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease;
 }
 
 .napkin {
@@ -177,11 +187,12 @@ body {
   line-height: 50px;
   font-size: 1.4rem;
   color: white;
+  padding-right: 40%;
 }
 
 .crumbs {
   rotate: 179deg;
-  top: 4%;
+  top: 0%;
   right: 25%;
   z-index: 0;
 }
@@ -189,7 +200,7 @@ body {
   font-size: 2rem;
   letter-spacing: 2px;
   font-weight: bold;
-  background: -webkit-linear-gradient(45deg,#fff8e1, #ddcc99, #473a16);
+  background: -webkit-linear-gradient(45deg, #fff8e1, #ddcc99, #473a16);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -197,9 +208,9 @@ body {
   font-size: 5.5rem;
   letter-spacing: 2%;
   line-height: 149px;
-  color: #ffe494;
-  text-shadow: 4px 0 #745d4b, -4px 0 #745d4b, 0 4px #745d4b, 0 -4px #745d4b,
-    1px 1px #745d4b, -1px -1px #745d4b, 1px -1px #745d4b, -1px 1px #745d4b;
+  color: #f7e5ad;
+  text-shadow: 4px 0 #30261f, -4px 0 #30261f, 0 4px #30261f, 0 -4px #30261f,
+    1px 1px #30261f, -1px -1px #30261f, 1px -1px #30261f, -1px 1px #30261f;
 }
 
 .pizza-img {
@@ -221,12 +232,17 @@ body {
 
 @media (max-width: 780px) {
   body {
-    overflow-x: hidden;
+  
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
   }
   .navbar {
-    width: 50%;
+    width: 100%;
+  }
+
+  .napkin {
+    display: none;
   }
   #home {
     flex-direction: column;
@@ -241,6 +257,7 @@ body {
   .home-par {
     line-height: 20px;
     width: 100%;
+    padding-right: 0;
   }
 
   .order-btn {
@@ -254,5 +271,18 @@ body {
     height: 400px;
     width: 400px;
     right: 0;
+  }
+
+  .menu-card {
+    width: 100%;
+  }
+
+  .order-div {
+    display: none;
+  }
+
+  .menu-page {
+    width: 100%;
+    overflow: auto;
   }
 }

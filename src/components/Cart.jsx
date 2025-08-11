@@ -6,22 +6,25 @@ export default function Cart() {
     useCart();
   if (isEmpty)
     return (
-      <div>
+      <div className="relative flex flex-col justify-center items-center">
         <h1 className="py-10 text-5xl raleway-regular">Your Orders</h1>
-        <img src="/image.png" alt="" />
+        <img src="/image.png" className="w-72" alt="" />
       </div>
     );
   return (
-    <div className="relative">
+    <div className="relative my-5 cart">
       <h1 className="py-10 text-5xl raleway-regular">Your Orders</h1>
 
       <div>
         {items.map((item) => (
-          <div className="relative" key={item.id}>
-            <img src="/image.png" alt="" />
+          <div
+            className="relative flex flex-col justify-center items-center"
+            key={item.id}
+          >
+            <img src="/image.png" className="w-72" alt="" />
             <img
               src={item.image}
-              className="w-48 absolute right-28 top-10"
+              className="w-40 absolute left-26 top-5"
               alt="itemimage"
             />
             <div className="">

@@ -18,12 +18,13 @@ export default function Home() {
         alt=""
         className="absolute right-0 crumbs top-0 z-0"
       />
-      <div className="md:w-1/2 flex flex-col md:justify-center items-center justify-center md:ml-20 z-10 h-1/2  ">
+      <img src="/crumbs.png" alt="" className="absolute left-96  top-96 rotate-45  z-0" />
+      <div className="md:w-1/2 flex flex-col md:justify-center md:items-center justify-center md:ml-20 z-10 h-1/2  md:h-full">
         <div className="playfair-display-bold text-4xl text-start great-food z-10">
           <h1> Great Food,</h1>
           <h1>Better Company</h1>
         </div>
-        <p className="home-par w-1/2 playfair-display-regular mb-5">
+        <p className="home-par  playfair-display-regular mb-5">
           Serving comfort food made with love — fresh, fast, and full of flavor.
         </p>
         <button

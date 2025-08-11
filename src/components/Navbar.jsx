@@ -5,12 +5,12 @@ export default function Navbar() {
   return (
     <div className="flex justify-between p-4 navbar fixed w-full z-20">
       <h1 className="montserrat-underline-bold">KOKO LOUNGE-BAR</h1>
-      <nav className="md:flex hidden md:gap-10 playfair-display-regulars">
+      <nav className="md:flex hidden md:gap-10 playfair-display-regular text-2xl cursor-pointer">
         <ScrollLink to="home" smooth duration={500} offset={-50}>
           Home
         </ScrollLink>
         <ScrollLink to="specialties" smooth duration={500} offset={-50}>
-          Menu
+          Specialties
         </ScrollLink>
         <ScrollLink to="about" smooth duration={500} offset={-50}>
           About
@@ -18,6 +18,7 @@ export default function Navbar() {
         <ScrollLink to="contact" smooth duration={500} offset={-50}>
           Contact
         </ScrollLink>
+        <Link to="/menu">Menu</Link>
       </nav>
       <button>+</button>
     </div>

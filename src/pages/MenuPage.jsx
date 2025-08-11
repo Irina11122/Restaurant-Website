@@ -145,7 +145,7 @@ export default function MenuPage() {
           return (
             <div className="w-30 mt-20 relative menu-card" key={p.id}>
               <img src={p.image} alt="" className="absolute my-menu-img z-10" />
-              <img src={p.plate} alt="plate" className="" />
+              <img src={p.plate} alt="plate" className="menu-plate" />
               <div className="menu-info-div">
                 <p className="text-white">Price: {p.price}$</p>
                 <p className="text-white">Ingridients:</p>
@@ -162,15 +162,15 @@ export default function MenuPage() {
         })}
       </div>
       <div className="order-div">
-        <div className="mt-24 rounded text-white text-center bg-black/30">
+        <div className="mt-24 rounded relative text-white text-center bg-black/30 overflow-hidden my-cart">
           <Cart />{' '}
-          <button
-            onClick={() => setModal(true)}
-            className="bg-black p-4 w-full rounded-3xl shadow-2xl"
-          >
-            Finish Order
-          </button>
-        </div>
+        </div>{' '}
+        <button
+          onClick={() => setModal(true)}
+          className="bg-black p-4 w-full text-gray-200 text-3xl shadow-2xl"
+        >
+          Finish Order
+        </button>
       </div>{' '}
       <div className="flex justify-center items-center">
         {' '}
